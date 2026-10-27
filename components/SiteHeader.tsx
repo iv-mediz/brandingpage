@@ -6,8 +6,8 @@ import { usePathname } from 'next/navigation';
 
 const links = [
   { href: '/', label: 'Home' },
-  { href: '/privacy/', label: 'Privacy Policy' },
-  { href: '/terms/', label: 'Terms & Conditions' },
+  { href: '/privacy/', label: 'Privacy' },
+  { href: '/terms/', label: 'Terms' },
 ];
 
 function isActive(pathname: string, href: string) {
@@ -22,8 +22,11 @@ export default function SiteHeader() {
     <header className="topbar">
       <div className="topbar-inner">
         <Link className="brand" href="/">
-          <Image src="/assets/logo-icon.png" alt="IV Mediz logo" width={52} height={52} />
-          <span>IV Mediz</span>
+          <Image src="/assets/logo-icon.png" alt="IV Mediz logo" width={46} height={46} />
+          <span className="brand-copy">
+            <span className="brand-name">IV MEDIZ</span>
+            <span className="brand-tag">Integrated Medical Solutions</span>
+          </span>
         </Link>
         <nav className="nav">
           {links.map((link) => (

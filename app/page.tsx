@@ -3,16 +3,31 @@ import Link from 'next/link';
 
 const offers = [
   {
-    title: 'Jobs for professionals',
-    body: 'Healthcare workers can build a profile, apply to openings, and share experience, documents, and availability with hospitals.',
+    title: 'Talent, placed with care',
+    body: 'Healthcare professionals build a trusted profile, apply to openings, and share credentials with hospitals that are hiring.',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm-7 9a7 7 0 0 1 14 0" stroke="currentColor" strokeWidth="1.7" />
+      </svg>
+    ),
   },
   {
-    title: 'Hospital hiring',
-    body: 'Hospitals and facilities can post jobs, review applicants, and manage hiring from the partner tools in the app.',
+    title: 'Hospitals that hire faster',
+    body: 'Facilities post roles, review applicants, and manage hiring from partner tools designed for clinical teams.',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6" stroke="currentColor" strokeWidth="1.7" />
+      </svg>
+    ),
   },
   {
-    title: 'Ambulance booking',
-    body: 'Users can request an ambulance, share a pickup location, and follow trip status. This is a booking service, not a replacement for emergency number 112.',
+    title: 'Ambulance, on request',
+    body: 'Share a pickup location and follow trip status. This is a booking service — for emergencies in India, call 112.',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <path d="M3 13h13l5 4v4H3v-8Zm4 8v-2m10 2v-2M8 13V6h6l4 4" stroke="currentColor" strokeWidth="1.7" />
+      </svg>
+    ),
   },
 ];
 
@@ -22,42 +37,39 @@ export default function HomePage() {
       <section className="hero">
         <div className="wrap hero-grid">
           <div>
-            <p className="eyebrow">Integrated • Medical • Solutions</p>
-            <h1>Healthcare jobs and ambulance booking, in one app.</h1>
-            <p>
-              IV Mediz helps hospitals hire clinical talent and helps people request ambulance
-              support. The Android app package is <strong>com.ivmedizapp.user</strong>.
+            <p className="eyebrow">Integrated · Medical · Solutions</p>
+            <h1>The quieter way to find care talent — and a ride to care.</h1>
+            <p className="hero-lead">
+              IV Mediz brings hospital hiring and ambulance booking into one refined mobile
+              experience for professionals, partners, and families.
             </p>
             <div className="actions">
-              <Link className="btn btn-light" href="/privacy/">
+              <Link className="btn btn-gold" href="/privacy/">
                 Privacy Policy
               </Link>
-              <Link className="btn btn-ghost" href="/terms/">
+              <Link className="btn btn-outline" href="/terms/">
                 Terms &amp; Conditions
               </Link>
             </div>
           </div>
-          <Image
-            className="hero-logo"
-            src="/assets/logo.png"
-            alt="IV Mediz"
-            width={280}
-            height={280}
-            priority
-          />
+          <div className="logo-wrap">
+            <Image src="/assets/logo.png" alt="IV Mediz" width={280} height={280} priority />
+          </div>
         </div>
       </section>
 
       <section className="section">
         <div className="wrap">
-          <h2>What IV Mediz offers</h2>
+          <p className="kicker">The platform</p>
+          <h2>Crafted for healthcare, not generic classifieds.</h2>
           <p className="lead">
-            One platform for professionals, hospitals, ambulance partners, and people who need a
-            ride to care.
+            One home for clinicians, hospitals, ambulance partners, and people who need a ride —
+            designed with the same care you expect from the work itself.
           </p>
           <div className="cards">
             {offers.map((item) => (
               <article className="card" key={item.title}>
+                <div className="icon">{item.icon}</div>
                 <h3>{item.title}</h3>
                 <p>{item.body}</p>
               </article>
@@ -66,18 +78,39 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section tight">
+      <section className="section alt">
         <div className="wrap">
-          <div className="card">
-            <h3>Play Store &amp; app information</h3>
-            <p className="spaced">
-              App name: <strong>iv mediz</strong>
-              <br />
-              Android package: <strong>com.ivmedizapp.user</strong>
-              <br />
-              Support: <a href="mailto:support@ivmediz.app">support@ivmediz.app</a> · Ambulance care
-              line: 1800-102-108
-            </p>
+          <div className="app-panel">
+            <div>
+              <p className="kicker" style={{ color: '#c9a36a' }}>
+                Google Play
+              </p>
+              <h3>iv mediz on Android</h3>
+              <p>
+                Package <strong>com.ivmedizapp.user</strong>. Support is available at
+                support@ivmediz.app, with ambulance assistance on 1800-102-108.
+              </p>
+            </div>
+            <ul className="meta-list">
+              <li>
+                <span>App name</span>
+                <strong>iv mediz</strong>
+              </li>
+              <li>
+                <span>Android package</span>
+                <strong>com.ivmedizapp.user</strong>
+              </li>
+              <li>
+                <span>Support</span>
+                <strong>
+                  <a href="mailto:support@ivmediz.app">support@ivmediz.app</a>
+                </strong>
+              </li>
+              <li>
+                <span>Care line</span>
+                <strong>1800-102-108</strong>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

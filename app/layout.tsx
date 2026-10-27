@@ -1,7 +1,19 @@
 import type { Metadata } from 'next';
+import { Cormorant_Garamond, Outfit } from 'next/font/google';
 import SiteFooter from '@/components/SiteFooter';
 import SiteHeader from '@/components/SiteHeader';
 import './globals.css';
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  variable: '--font-display',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -19,8 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={`${outfit.variable} ${cormorant.variable}`}>
+      <body className={outfit.className}>
         <SiteHeader />
         {children}
         <SiteFooter />

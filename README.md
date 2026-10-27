@@ -1,24 +1,28 @@
 # IV Mediz branding site
 
-Public branding page with **Privacy Policy** and **Terms & Conditions** for the IV Mediz Android app (`com.ivmedizapp.user`).
+Next.js + TypeScript branding site with **Privacy Policy** and **Terms & Conditions** for the IV Mediz Android app (`com.ivmedizapp.user`).
+
+## Local
+
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:3000/brandingpage (base path matches GitHub Pages).
 
 ## Pages
 
-- Home: `index.html`
-- Privacy Policy: `privacy.html`
-- Terms & Conditions: `terms.html`
+- Home: `/`
+- Privacy Policy: `/privacy`
+- Terms & Conditions: `/terms`
 
 ## GitHub Pages
 
-After the first push, enable Pages:
-
-1. Repo **Settings** → **Pages**
-2. Source: **GitHub Actions** (workflow in `.github/workflows/pages.yml`)
+The site is statically exported (`output: "export"`) and deployed from `.github/workflows/pages.yml`.
 
 Expected URLs:
 
 - https://iv-mediz.github.io/brandingpage/
-- https://iv-mediz.github.io/brandingpage/privacy.html
-- https://iv-mediz.github.io/brandingpage/terms.html
-
-Use the privacy URL in Google Play Console → App content → Privacy policy.
+- https://iv-mediz.github.io/brandingpage/privacy/
+- https://iv-mediz.github.io/brandingpage/terms/

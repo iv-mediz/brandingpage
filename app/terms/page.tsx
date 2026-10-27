@@ -1,0 +1,148 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Terms & Conditions',
+  description: 'Terms and Conditions for the IV Mediz mobile app (com.ivmedizapp.user).',
+};
+
+export default function TermsPage() {
+  return (
+    <section className="section">
+      <div className="wrap legal">
+        <h1>Terms &amp; Conditions</h1>
+        <p className="meta">
+          Effective date: 27 October 2026 · App: iv mediz (Android package{' '}
+          <strong>com.ivmedizapp.user</strong>)
+        </p>
+        <p>
+          These Terms &amp; Conditions (“Terms”) govern your use of the IV Mediz mobile application
+          and related services. By creating an account or using the app, you agree to these Terms
+          and our <Link href="/privacy/">Privacy Policy</Link>.
+        </p>
+
+        <h2>1. The service</h2>
+        <p>IV Mediz is a technology platform that:</p>
+        <ul>
+          <li>lists healthcare job openings and lets professionals apply;</li>
+          <li>lets hospitals and facilities post jobs and review applicants; and</li>
+          <li>lets users request ambulance bookings from participating operators.</li>
+        </ul>
+        <p>
+          <strong>
+            IV Mediz is not a hospital, ambulance owner in every booking, or emergency medical
+            service.
+          </strong>{' '}
+          For a medical emergency in India, call <strong>112</strong> (or your local emergency
+          number) immediately. Booking through the app does not guarantee a vehicle, a particular
+          arrival time, or clinical outcome.
+        </p>
+
+        <h2>2. Eligibility</h2>
+        <p>
+          You must be at least 18 years old and able to form a binding contract. You confirm that
+          information you submit is accurate. Healthcare professionals must hold any licence or
+          registration required for the roles they apply to.
+        </p>
+
+        <h2>3. Accounts</h2>
+        <p>
+          You sign in with a mobile number and OTP. You are responsible for activity on your
+          account. Tell us promptly at <a href="mailto:support@ivmediz.app">support@ivmediz.app</a>{' '}
+          if you believe your account is misused. We may suspend accounts that violate these Terms
+          or create safety or fraud risk.
+        </p>
+
+        <h2>4. Jobs and hiring</h2>
+        <ul>
+          <li>Job posts must be genuine, lawful, and complete (including a real job description).</li>
+          <li>Applications and documents you submit may be shown to the posting hospital or facility.</li>
+          <li>IV Mediz does not guarantee employment, salary, or that a hospital will hire you.</li>
+          <li>
+            Hospitals are responsible for their own hiring decisions and for complying with labour
+            and professional regulations.
+          </li>
+        </ul>
+
+        <h2>5. Ambulance bookings</h2>
+        <ul>
+          <li>You must provide a reachable phone number and an accurate pickup location.</li>
+          <li>Fares, availability, and vehicle type depend on the assigned operator and local conditions.</li>
+          <li>Drivers and operators are responsible for vehicle condition, licensing, and how the trip is performed.</li>
+          <li>
+            IV Mediz may share your contact and location details with the assigned operator to
+            complete the trip.
+          </li>
+        </ul>
+
+        <h2>6. Subscriptions and payments</h2>
+        <p>
+          Some features (for example job posting plans) may require a paid subscription shown in the
+          app. Fees, duration, and cancellation rules are those displayed at the time of purchase.
+          Unless required by law, fees already paid are not refundable after the service period has
+          started.
+        </p>
+
+        <h2>7. Acceptable use</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>post false jobs, fake profiles, or misleading documents;</li>
+          <li>harass, discriminate against, or exploit other users;</li>
+          <li>use the app for unlawful activity or to interfere with emergency response;</li>
+          <li>attempt to access other accounts, scrape data, or disrupt our systems;</li>
+          <li>upload malware or content you do not have the right to share.</li>
+        </ul>
+
+        <h2>8. Intellectual property</h2>
+        <p>
+          The IV Mediz name, logo, and app content belong to IV Mediz or its licensors. You may not
+          copy or reuse them except as allowed by us in writing. You grant us a licence to host and
+          display content you upload (profile, jobs, documents) solely to operate the service.
+        </p>
+
+        <h2>9. Disclaimers</h2>
+        <p>
+          The app is provided “as is”. We do not warrant uninterrupted availability, error-free
+          maps, or that a job or ambulance request will be fulfilled. Clinical advice is not
+          provided through the app.
+        </p>
+
+        <h2>10. Limitation of liability</h2>
+        <p>
+          To the maximum extent permitted by Indian law, IV Mediz and its affiliates are not liable
+          for indirect, incidental, or consequential losses, or for delays, no-shows, hiring
+          outcomes, or medical events arising from use of the platform. Our total liability for a
+          claim relating to the app is limited to the amount you paid us for the service in the
+          three months before the claim, or INR 1,000, whichever is higher.
+        </p>
+
+        <h2>11. Termination</h2>
+        <p>
+          You may stop using the app at any time. We may suspend or end access if you breach these
+          Terms. Provisions that by nature should survive (including liability limits and
+          intellectual property) remain in effect.
+        </p>
+
+        <h2>12. Governing law</h2>
+        <p>
+          These Terms are governed by the laws of India. Courts in Hyderabad, Telangana, India shall
+          have exclusive jurisdiction, subject to any non-excludable rights you have under
+          applicable law.
+        </p>
+
+        <h2>13. Changes</h2>
+        <p>
+          We may update these Terms. The date at the top of this page will change when we do.
+          Continued use after an update means you accept the new Terms.
+        </p>
+
+        <h2>14. Contact</h2>
+        <p>
+          Email: <a href="mailto:support@ivmediz.app">support@ivmediz.app</a>
+          <br />
+          Ambulance support line: 1800-102-108
+        </p>
+      </div>
+    </section>
+  );
+}

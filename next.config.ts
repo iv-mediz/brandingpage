@@ -1,10 +1,15 @@
 import type { NextConfig } from 'next';
 
+const repoBase = '/brandingpage';
+const useRepoBase = process.env.GITHUB_PAGES === 'true';
+
 const nextConfig: NextConfig = {
   output: 'export',
   images: { unoptimized: true },
   trailingSlash: true,
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '/brandingpage',
+  ...(useRepoBase
+    ? { basePath: repoBase, assetPrefix: repoBase }
+    : {}),
 };
 
 export default nextConfig;
